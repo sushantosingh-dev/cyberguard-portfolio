@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #e8f0ff;
+  background: #050b16;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #050b16;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.portfolio {
+  background:
+    radial-gradient(ellipse at 80% 10%, #082748 0%, transparent 35%),
+    #050b16;
+  min-height: 100vh;
+}
+
+.navbar {
+  min-height: 76px;
+  padding: 18px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid #18304b;
+  background: #050b16eF;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: blur(12px);
+}
+
+.logo { font-size: 20px; font-weight: 800; }
+.logo span, h1 span, h2 span { color: #39b7ff; }
+
+.nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.nav-links a { color: #a7b8d0; font-size: 13px; }
+.nav-links a:hover { color: #39b7ff; }
+
+.hero {
+  max-width: 1120px;
+  margin: auto;
+  min-height: 520px;
+  padding: 90px 28px;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.eyebrow {
+  color: #43c4ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 { font-size: clamp(34px, 5vw, 58px); line-height: 1.15; margin: 20px 0 12px; }
+.hero h2 { font-size: 20px; color: #c4d5ec; font-weight: 500; }
+.intro, .section-text { color: #9eb0c9; line-height: 1.9; max-width: 620px; font-size: 15px; }
+
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+
+.btn {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.primary {
+  color: #03101c;
+  background: linear-gradient(100deg, #36c5ff, #2784ff);
+  box-shadow: 0 8px 28px #168bff26;
+}
+
+.secondary { border: 1px solid #29445f; color: #dcecff; }
+.btn:hover { transform: translateY(-2px); }
+
+.availability { margin-top: 26px; color: #5ce4b2; font-size: 12px; }
+
+.shield-card {
+  border: 1px solid #1b4b70;
+  border-radius: 24px;
+  padding: 45px 20px;
+  text-align: center;
+  background: linear-gradient(145deg, #0b2238, #071321);
+  box-shadow: 0 0 65px #0876ba20;
+}
+
+.shield { font-size: 90px; filter: drop-shadow(0 0 24px #28baff50); }
+.shield-card p { letter-spacing: 3px; font-weight: 800; font-size: 13px; }
+.shield-card span { color: #8ca8c5; font-size: 12px; }
+
+.section { max-width: 1000px; margin: auto; padding: 65px 28px; }
+.section > h2 { font-size: 34px; margin: 10px 0 22px; }
+.section-text { margin-bottom: 25px; }
+
+.project-card {
+  padding: 30px;
+  border: 1px solid #1b3a56;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #0c1c2d, #071321);
+  max-width: 780px;
+}
+
+.project-icon { font-size: 32px; }
+.project-label { color: #43c4ff; font-size: 10px; letter-spacing: 2px; font-weight: 800; }
+.project-card h3 { font-size: 27px; margin: 8px 0; }
+.project-subtitle { color: #d0dff1; font-weight: 600; }
+
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 22px 0; }
+.tags span, .skill {
+  border: 1px solid #214361;
+  border-radius: 8px;
+  padding: 10px 13px;
+  background: #0b2033;
+  color: #b9d9f5;
+  font-size: 12px;
+}
+
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.skill { padding: 17px; }
+
+footer {
+  border-top: 1px solid #18304b;
+  padding: 26px;
+  text-align: center;
+  color: #8096b2;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .navbar { padding: 16px 5%; align-items: flex-start; flex-direction: column; }
+  .nav-links { gap: 14px; }
+  .hero { grid-template-columns: 1fr; padding: 60px 22px; gap: 30px; }
+  .shield-card { padding: 28px 15px; }
+  .shield { font-size: 65px; }
+  .section { padding: 45px 22px; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .section > h2 { font-size: 29px; }
+}
